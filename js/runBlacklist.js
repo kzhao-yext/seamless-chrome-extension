@@ -9,7 +9,6 @@ for (i = 0; i < restaurants.length; i++) {
       for (j = 0; j < blacklist.length; j++) {
         if (restaurant.innerHTML.search(blacklist[j]) >= 0) {
             let parent = restaurant.parentNode;
-            console.log(restaurant.innerHTML);
             parent.removeChild(restaurant);
           }
       }

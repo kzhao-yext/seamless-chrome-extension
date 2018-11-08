@@ -5,7 +5,7 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({blacklist: ["251 Ginza Sushi", "44th Street Minar"]}, function() {
+  chrome.storage.sync.set({blacklist: []}, function() {
     console.log("No restaurants on the blacklist.");
   });
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {

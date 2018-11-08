@@ -34,7 +34,7 @@ function constructOptions(kButtonColors) {
 }
 
 function add() {
-  let restaurant = prompt("Enter restaurant name to add to the blacklist", "");
+  let restaurant = prompt("Enter restaurant name (case sensitive) to add to the blacklist", "");
   if (restaurant === null || restaurant !== "") {
     chrome.storage.sync.get(
       ['blacklist'],
@@ -53,7 +53,7 @@ function add() {
 }
 
 function remove() {
-  let restaurant = prompt("Enter restaurant names to remove from the blacklist", "");
+  let restaurant = prompt("Enter restaurant name (case sensitive) to remove from the blacklist", "");
   if (restaurant === null || restaurant !== "") {
     chrome.storage.sync.get(
       ['blacklist'],
